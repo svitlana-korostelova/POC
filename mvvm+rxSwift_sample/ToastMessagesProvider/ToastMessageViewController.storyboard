@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Bottom Toast Messages View Controller-->
+        <scene sceneID="d5O-Xr-UTQ">
+            <objects>
+                <viewController storyboardIdentifier="BottomToastMessagesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0iT-kn-daN" customClass="BottomToastMessagesViewController" customModule="mvvm_rxSwift_sample" sceneMemberID="viewController">
+                    <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="yEd-d3-TH9" customClass="BottomToastMessagesView" customModule="mvvm_rxSwift_sample">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhh-qe-7Cu">
+                                <rect key="frame" x="16" y="593.5" width="343" height="49.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cIz-OL-5YY">
+                                        <rect key="frame" x="16" y="13" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="S7F-3Y-grY"/>
+                                            <constraint firstAttribute="width" constant="24" id="i3b-W5-I7A"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cb1-ng-DgG">
+                                        <rect key="frame" x="56" y="16" width="271" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Cb1-ng-DgG" secondAttribute="trailing" constant="16" id="0ee-tp-xL5"/>
+                                    <constraint firstItem="Cb1-ng-DgG" firstAttribute="leading" secondItem="cIz-OL-5YY" secondAttribute="trailing" constant="16" id="I03-kL-CBY"/>
+                                    <constraint firstItem="cIz-OL-5YY" firstAttribute="centerY" secondItem="jhh-qe-7Cu" secondAttribute="centerY" id="Kcy-mr-CQK"/>
+                                    <constraint firstItem="cIz-OL-5YY" firstAttribute="leading" secondItem="jhh-qe-7Cu" secondAttribute="leading" constant="16" id="jWa-m4-dPQ"/>
+                                    <constraint firstItem="Cb1-ng-DgG" firstAttribute="top" secondItem="jhh-qe-7Cu" secondAttribute="top" constant="16" id="s9Z-SI-xBz"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cb1-ng-DgG" secondAttribute="bottom" constant="16" id="yrV-JM-gTf"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y7t-UN-WD4"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jhh-qe-7Cu" firstAttribute="leading" secondItem="yEd-d3-TH9" secondAttribute="leading" constant="16" id="DYB-jZ-sxo"/>
+                            <constraint firstItem="Y7t-UN-WD4" firstAttribute="bottom" secondItem="jhh-qe-7Cu" secondAttribute="bottom" constant="24" id="OCg-iu-d7y"/>
+                            <constraint firstAttribute="trailing" secondItem="jhh-qe-7Cu" secondAttribute="trailing" constant="16" id="Q9G-At-cjl"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="toastMessageImageView" destination="cIz-OL-5YY" id="hBT-JM-u1v"/>
+                        <outlet property="toastMessageLabel" destination="Cb1-ng-DgG" id="UAN-mD-oH6"/>
+                        <outlet property="toastMessageView" destination="jhh-qe-7Cu" id="Xxu-DI-38h"/>
+                        <outlet property="toastMessageViewBottomConstraint" destination="OCg-iu-d7y" id="8Oe-wL-jsU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CQh-i3-Tdn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="656" y="93"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
